@@ -1,0 +1,53 @@
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+    bool continuer = true;
+    char    Direction;
+    int x = 0,
+        y = 0,
+        xMax = 0,
+        yMax = 0,
+        manhattan = 0,
+        manhattanMax = 0,
+        nbrePas = 0;
+    do
+    {
+        cout << "Entrer une direction (a, w, d ,s) sinon x pour terminer:";
+        cin >> Direction;
+        
+        switch (Direction)
+        {
+            case 'a': x += -1; nbrePas += 1;
+                break;
+            case 'w': y += 1; nbrePas += 1;
+                break;
+            case 'd': x += 1; nbrePas += 1;
+                break;
+            case 's': y += -1; nbrePas += 1;
+                break;
+            case 'x': continuer = false;
+                break;
+            default: cout << "touche inconnue" << endl;
+                break;
+        }
+        manhattan = abs(x) + abs(y);
+        if (x > xMax)
+            xMax = x;
+        if (y > yMax)
+            yMax = y;
+        if (manhattan > manhattanMax)
+            manhattanMax = manhattan;
+    }
+    while (continuer);
+    
+    cout << "\nPosition finale: (" << x << ',' << y << ')';
+    cout << "\nDistance manhattan : " << manhattan; 
+    cout << "\nPosition la plus eloignee : (" << xMax << ',' << yMax << ')';
+    cout << "\nDistance Manhattan maximale : " << manhattanMax;
+    cout << "\nNombre de deplacements : " << nbrePas;
+    cout << "\n\nFin du programme";
+    return 0;
+}
