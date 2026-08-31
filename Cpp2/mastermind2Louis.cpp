@@ -5,7 +5,7 @@
 using namespace std;
 
 const int TAILLE = 5;
-const char LETTRE_VALIDE[8]{ 'q', 'w', 'e', 'r', 't', 'y','u', 'i'};
+const char LETTRE_VALIDE[8]{ 'q', 'w', 'e', 'r', 't', 'y','u', 'i' };
 const char NBRE_LETTRE_DISPO = 8;
 const int NB_ESSAIS = 12;
 char enigme[TAILLE]{};
@@ -91,7 +91,7 @@ int	main(void)
 	unsigned int i;
 	bool vraiReponse;
 	char reponseRejouer;
-	
+
 	do
 	{
 		srand(time(0));
@@ -99,7 +99,13 @@ int	main(void)
 		system("cls"); // clear console
 
 		i = 0;
-		cout << "\t\t\t\t   Les lettres disponibles sont : q w e r t y u i" << endl;
+
+		cout << "Combien d'essais voulez-vous ? (entre 6 et 18) : " << endl;
+		int nb_essais = _getche();
+		cout << "Nombre de charactere a deviner ? (entre 3 et 12) : " << endl;
+		int taille = _getche();
+		cout << "Choissez la difficulte(Nombre de lettre differente entre 2 et 8) : "
+		cout << "\t\t\t\t   Les lettres disponibles sont : q w e r t y u i : " << endl;
 		//cout << enigme << endl; //test 
 		// saisir lettres, compare avec copie enigme, imprime X, imprime .  
 		while (i <= NB_ESSAIS)
