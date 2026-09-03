@@ -8,7 +8,7 @@ void	cppSwap(int& a, int& b)
 	b = temp;
 }
 
-void	bubbleSort(int tab[], int taille)
+void	bubbleSort(int tab[], int taille) // tab[] dans parametre modifie l'adresse egalement. comme &
 {
 	int temp;
 	bool swapped = true;
