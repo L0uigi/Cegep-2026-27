@@ -1,8 +1,7 @@
 #include <iostream>
 #include <conio.h>
 
-#include "X:\\cvm_25.h"
-
+#include "X:\cvm_25.h" // mettre cvm.cpp
 using namespace std;
 
 enum Etat {ETEINTE, PAUSE, LENT, MOYEN, RAPIDE, INVALIDE};
@@ -16,21 +15,7 @@ bool demandeQuitter(Etat actuel, Etat suivant);
 void actualiserAffichage(Etat actuel, int x, int y);
 void executerMachine();
 
-int	main(void)
-{
-	cout << "Les options de la machine : " << endl
-		<< "e = ETEINTE" << endl
-		<< "p = PAUSE" << endl
-		<< "l = LENT" << endl
-		<< "m = MOYEN" << endl
-		<< "r = RAPIDE" << endl;
 
-	cout << "Eteindre deux fois pour quitter le programme" << endl;
-
-	executerMachine();
-	cout << "Au revoir";
-	return 0;
-}
 
 void afficherEtat(Etat etat)
 {
@@ -91,4 +76,19 @@ void executerMachine()
 				actualiserAffichage(actuel, x, y);
 			}
 		}
+}
+int	main(void)
+{
+	cout << "Les options de la machine : " << endl
+		<< "e = ETEINTE" << endl
+		<< "p = PAUSE" << endl
+		<< "l = LENT" << endl
+		<< "m = MOYEN" << endl
+		<< "r = RAPIDE" << endl;
+
+	cout << "Eteindre deux fois pour quitter le programme" << endl;
+
+	executerMachine();
+	cout << "Au revoir";
+	return 0;
 }
