@@ -16,10 +16,10 @@ void selectionSort(int tab[], int taille) // faire un swap 1 fois. On utilise l'
 	size_t IdxMin;
 	for (size_t i = 0; i < taille; ++i)
 	{
+		IdxMin = i;
 		for (size_t j = i ; j < taille; ++j)
 		{
-			IdxMin = i;
-			if (tab[j] < tab[i])
+			if (tab[j] < tab[IdxMin])
 			{
 				IdxMin = j;
 			}
