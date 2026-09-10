@@ -1,7 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include <cstdlib>
-#include "C:\Users\1957480\source\repos\Project1\Project1\cvm_25.h"
+#include "C:\Users\1957480\source\repos\MastermindV2\cvm_25.h"
 
 using namespace std;
 
@@ -11,6 +11,14 @@ const char LETTRE_VALIDE[8]{ 'q', 'w', 'e', 'r', 't', 'y','u', 'i' };
 //const char NBRE_LETTRE_DISPO = 8;
 //const int NB_ESSAIS = 12;
 
+enum class Deplacement
+{
+	LEFT = 75,
+	RIGHT = 77,
+	BACK = 8
+};
+
+using Dp = Deplacement;
 
 //char enigme[TAILLE]{};
 //char reponseJoueur[TAILLE]{};
@@ -122,6 +130,7 @@ int	main(void)
 	int NbreLettreDispo;
 	do
 	{
+		clrscr();
 		//cout << "Combien d'essais voulez-vous ? (entre 6 et 18) : " << endl;
 		nbreEssais = saisirNombre(18, 6, "Combien d'essais voulez-vous ? (entre 6 et 18) : ");
 		//cout << "Nombre de charactere a deviner ? (entre 3 et 12) : " << endl;
@@ -129,7 +138,7 @@ int	main(void)
 		//cout << "Choissez la difficulte(Nombre de lettre differente entre 2 et 8) : ";
 		NbreLettreDispo = saisirNombre(8, 2, "Choissez la difficulte(Nombre de lettre differente entre 2 et 8) : ");
 
-		cout << nbreEssais << endl << taille << endl << NbreLettreDispo << endl;
+		//cout << nbreEssais << endl << taille << endl << NbreLettreDispo << endl;   // test 
 		_getch();
 		srand(time(0));
 		genererEnigme(enigme, copieEnigme, taille, NbreLettreDispo);
