@@ -1,13 +1,18 @@
 #include <iostream>
 #include <conio.h>
 #include <cstdlib>
-#include "C:\Users\1957480\source\repos\MastermindV2\cvm_25.h"
+#include "cvm_25.h"
 
 using namespace std;
 
 const int TAILLE_MAX = 12;
 //const int TAILLE = 5;
-const char LETTRE_VALIDE[8]{ 'q', 'w', 'e', 'r', 't', 'y','u', 'i' };
+//const char LETTRE_VALIDE[8]{ 'q', 'w', 'e', 'r', 't', 'y','u', 'i' };
+const char LETTRE_VALIDE[26]{
+	'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+	'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+	'u', 'v', 'w', 'x', 'y', 'z'
+};
 //const char NBRE_LETTRE_DISPO = 8;
 //const int NB_ESSAIS = 12;
 
@@ -77,12 +82,14 @@ bool	verifierSolution(char tab[],char copieEnigme[], int taille)
 {
 	bool vraiReponse = false;
 	int count = 0;
+	int x, y;
 
 	for (int i = 0; i < taille; i++)
 	{
 		if (copieEnigme[i] == tab[i])
 		{
 			copieEnigme[i] = '0';
+			tab[i] = 0;
 			cout << 'X';
 			count++;
 		}
@@ -91,8 +98,18 @@ bool	verifierSolution(char tab[],char copieEnigme[], int taille)
 	}
 	for (int i = 0; i < taille; i++)
 	{
+		//x = wherex();
+		//y = wherey();
+		//gotoxy(0, 0);
+		//for (int k = 0; k < taille; k++)
+		//{
+		//	cout << copieEnigme[k];
+		//}
+		//gotoxy(x, y);
+
 		if (verifierPoint(tab[i], copieEnigme, taille) == true)
 		{
+			tab[i] = '0';
 			cout << '.';
 		}
 	}
@@ -119,7 +136,7 @@ int	saisirNombre(int max, int min, string message)
 int	main(void)
 {
 	
-	unsigned int i = 0;
+	
 	bool vraiReponse;
 	char reponseRejouer;
 	char enigme[TAILLE_MAX]{};
@@ -130,23 +147,24 @@ int	main(void)
 	int NbreLettreDispo;
 	do
 	{
+		unsigned int i = 0;
 		clrscr();
 		//cout << "Combien d'essais voulez-vous ? (entre 6 et 18) : " << endl;
 		nbreEssais = saisirNombre(18, 6, "Combien d'essais voulez-vous ? (entre 6 et 18) : ");
 		//cout << "Nombre de charactere a deviner ? (entre 3 et 12) : " << endl;
 		taille = saisirNombre(12, 3, "Nombre de charactere a deviner ? (entre 3 et 12) : ");
 		//cout << "Choissez la difficulte(Nombre de lettre differente entre 2 et 8) : ";
-		NbreLettreDispo = saisirNombre(8, 2, "Choissez la difficulte(Nombre de lettre differente entre 2 et 8) : ");
+		NbreLettreDispo = saisirNombre(26, 2, "Choissez la difficulte(Nombre de lettre differente entre 2 et 26) : ");
 
 		//cout << nbreEssais << endl << taille << endl << NbreLettreDispo << endl;   // test 
-		_getch();
+		//_getch();
 		srand(time(0));
 		genererEnigme(enigme, copieEnigme, taille, NbreLettreDispo);
 		system("cls"); // clear console
-		for (int k = 0; k < taille; k++)
-		{
-			cout << enigme[k];
-		}
+		//for (int k = 0; k < taille; k++)
+		//{
+		//	cout << enigme[k];
+		//}
 
 	//	cout << "\t\t\t\t   Les lettres disponibles sont : q w e r t y u i : " << endl; // a modifier
 		cout << "\t\t\t\t   Les lettres disponibles sont : ";
@@ -158,7 +176,7 @@ int	main(void)
 		// saisir lettres, compare avec copie enigme, imprime X, imprime .  
 		while (i <= nbreEssais)
 		{
-			cout << "\nTour " << i << " : ";
+			cout << "\n\t\t\t\t   Tour " << i << " : ";
 			for (int y = 0; y < taille; y++)
 			{
 				reponseJoueur[y] = saisirEtAfficherLettre(NbreLettreDispo);
