@@ -1,0 +1,4 @@
+ALERTE : Condensateur 3
+ALERTE : Transistor 2
+ALERTE : Diode 4
+Somme des quantites : 96

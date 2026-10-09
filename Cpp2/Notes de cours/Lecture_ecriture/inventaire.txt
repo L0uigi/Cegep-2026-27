@@ -1,0 +1,7 @@
+Resistance 14
+Condensateur 3
+LED_Rouge 50
+Transistor 2
+Microcontroleur 8
+Diode 4
+Potentiometre 15
