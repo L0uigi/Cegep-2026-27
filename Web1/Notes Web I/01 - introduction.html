@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<!-- draguer sur le plus d'un naviguateur pour voir changements -->
+<!-- html 5, balise a mettre des le debut-->
+<html lang="fr">
+
+<head>
+    <title>Page Introduction </title>
+    <!-- balise meta, pas obligé de fermer > -->
+    <meta name = "description" content ="Première page du cours">
+    <!-- Pour description engin de  recherche-->
+    <!-- Pour enregistrer les accents, doit être le même que dans Vs code (en bas) -->
+    <meta charset="utf-8">
+    
+    <!-- <meta http-equi="refresh" content="5;https://perdu.com"> -->
+
+</head>
+
+<body>
+    <!-- "" veut dire page actuelle.  -->
+     <!-- "#p1" se déplace a p1 plus bas. -->
+    <h1>Titre <a href="#p1"> niveau 1</a> </h1>
+    <h2>Titre niveau 2 </h2>
+    <h3>Titre niveau 3 </h3>
+    <h4>Titre niveau 4 </h4>
+    <h5>Titre niveau 5 </h5>
+    <h6>Titre niveau 6 </h6>
+
+    <p>
+        Mon premier paragraphe
+        <!--  <a href="https://perdu.com"> est un attribut -->
+            <!-- NORME : un inline (t.q a) ne peut pas englober un bloc -->
+       
+            <!-- target="_blank" va ouvrir un nouvelle onglet, à mettre dans attribut du a href -->
+          <!-- si target="allo" va ouvrir un seul onglet et le réutilise si on reclique dessus.  -->
+       <a href="https://perdu.com"target="allo"> perdu</a>
+    </p>
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <!-- preformated, garde les espaces, saut de la ligne du code etc.. -->
+    
+    <pre>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A asperiores molestiae, atque neque nihil ex facilis alias expedita ipsam nemo quaerat rem iure saepe necessitatibus deserunt natus, minus, numquam fugiat!
+    </pre>
+    
+    <p>
+        <!-- span change le style pour quelque mots. Span est de type inline, n'est pas un block comme p, meta, div -->
+        <!-- inline ne font pas de retour à la ligne -->
+        Lorem <span style="opacity:0.5" >  ipsum </span>dolor,  <strong> sit amet consectetur </strong> adipisicing elit. 
+        <br>
+        <br>
+        <br>
+        Voluptates corrupti dolor deleniti deserunt sapiente ducimus amet cupiditate magni perspiciatis, quasi quas excepturi voluptatibus possimus minus. Molestiae fugit nisi officia distinctio.
+        
+    </p>
+
+    <div style="border:1px solid black; padding: 4px;color: green;">
+        <h2>dasddsad</h2>
+        <!-- id : donner un nom au paragraphe -->
+        <p id="p1"> dasdaaa <a href="03 - tableaux.html">Tableau sur le même site</a>/a> </p>
+        <!-- ctrl+espace pour trouver son image -->
+        <img src="img/bean.jpg" alt="Mr.Breans">
+    </div>
+
+
+</body>
+
+
+</html>

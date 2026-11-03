@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <!-- Se connecte aux adresses pour accèder au font, police etc.. -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- crossorigin nécéssaire, car 2 domaines différents -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- rel="styleshet" = feuille de style CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+        <style>
+            html {
+                font-size: 15px;
+            }
+
+            p {
+                color: green;
+                font-style: normal; /* italic */
+                font-weight: 400; /* 400 = normal, bold (700), lighter(300) */
+                font-variant: normal; /* small-caps */
+                font-size: 1.1rem;
+                /* font-family: Arial, Helvetica, sans-serif; */
+                font-family: Verdana, monospace;
+                font-family: "Henny Penny", system-ui;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            span {
+                /* em = en fonction de la taille du parent. 1em = 100% de la taille du parent */
+                /* rem = selon la racine du document (html) */
+                /* px, vh, vw, % */
+                font-size: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <p style='text-align: left;'>À gauche</p>
+        <p style="text-align: center; border: 1px solid black">
+            Au centre
+            <br>
+            <span>
+                sadfsad f
+            </span>
+        </p>
+        <p style="text-align: right;">À droite</p>
+        <p style="text-align: justify;">
+            Justifié
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab similique ad reiciendis voluptatibus sapiente quibusdam incidunt assumenda, dolorum eaque atque! Dolore adipisci consectetur in modi sunt quibusdam molestias itaque.
+        </p>
+
+        <p style="color:red;text-decoration: underline;">Souligné</p>
+        <p style="text-decoration: line-through;">Barré</p>
+        <p style="text-decoration: overline;">Au dessus</p>
+
+        <p style="text-indent: 30px;">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, id vero. Sint esse libero laborum doloremque autem ab at fuga! Quibusdam, ullam dolorum maxime est numquam fugit. Excepturi, eaque quam.
+        </p>
+        <!-- capitalize, uppercase, lowercase, none -->
+        <p style="text-transform: capitalize;">lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+
+        <!-- normal = par défaut, donc nouvelle ligne au besoin -->
+        &copy;
+        <p style="line-height: 40px; white-space: pre;">
+            Extrait HTML d'un titre : &lt;h1&gt;asdf&lt;/h1&gt;
+            if (1 == 2) {
+                cout &gt;&gt; "sadf";
+            }
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptates qui laboriosam, adipisci illum mollitia quam cupiditate sed dolorum aliquam cum dolor velit incidunt dolores debitis id deserunt totam quae.
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+        </p>
+    </body>
+</html>

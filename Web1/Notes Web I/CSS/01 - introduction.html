@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction</title>
+    <!-- le language change selon les balise -->
+	<style>
+        /* on est en CSS */
+        * {
+            /* * pour changer toutes les balises */
+            padding: 0;
+            margin:0;
+        }
+        
+            p, h1 {
+                /* pour changer tous les paragraphes, tous les h1 */
+
+                color:red; /*!important */
+        }
+
+        /* changer tous les p qui sont dans un div */
+        /* aura priorité sur l'autre p qu'on mets en rouge, mais peut override avec !important après la couleur*/
+        div p {
+            color:blue;
+        }
+        /* div > span = span enfant immédiat de div */
+        div > span {
+            color:lightsalmon;
+        }
+
+        /* version moderne */
+
+        div{
+            color: purple;
+            
+            /* & = equivalent du parent, dans ce cas ci, un span directement sous un p */
+            & > span {
+                color:orange;   
+            };
+            p{
+                font-size: 1.1em;
+                
+                
+                span{
+                    color: blue;
+                    text-decoration: underline;
+                }
+            }
+        }
+        /* selon la classe (créé plus bas)*/
+        .louis{
+            color:pink;
+        }
+
+        .form-label{
+            opacity: 0.5;
+        }
+        /* "div" qui a la classe "is" */
+        div.mvp{
+            background-color: aqua;
+        }
+
+        #vong, #anis{
+            font-size: 2rem;
+        }
+        /* les éléments "blocks" sont définis par leurs contenu. ex: hauteur d'une boite */
+        html body > div.box-model{
+            background-color: aquamarine;
+            /* padding = espace entre texte et contour boite */
+            padding: 10px;
+
+            /* 20px en haut, 0 gauche et droite */
+            /* padding: 20px 0; */
+            
+            /* 10px en haut , 20px gauche droite 50px en bas*/
+            /* padding: 10px 20px 50px; */
+            
+            /* overrite à droite */
+            padding-right: 50px;
+
+            /* margin = espace à l'exterieur */
+            /* margin: 40px; */
+
+            /* Pour centrer un élément dans une page même quand on change la taille de la fenêtre*/
+            width: 300px;
+            margin: 30px auto;
+            
+            
+            /* forcer la hauteur de la boite */
+            /* vh = % de la hauteur de la fenetre */
+            height: 50vh;
+            /* limite minimum de hauteur */
+            min-height: 400px;
+            max-height: 500px;
+        }
+	</style>
+    <script>
+        //on est en java script
+    </script>
+</head>
+<body>
+    <h1 id="anis">Super titre de la page</h1>
+    <!-- style à l'intérieur de la balise est plus prioritaire -->
+    <div style="color:brown" class="abc important mvp is louis form-label">
+        <p>Lorem ipsum dolor, <span class = "louis">sit</span> amet consectetur.</p>
+    </div>
+    <p id="vong">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ullam neque, corrupti aliquid porro veniam, officia recusandae iste maiores ducimus quae numquam? Ipsum voluptatibus sed in beatae ab iste blanditiis.
+    </p>
+    <hr>
+    <h2>Box model</h2>
+    <div style= "border:1px solid black" class ="box-model">
+        Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ullam neque, corrupti aliquid porro veniam, officia recusandae iste maiores ducimus quae 
+    </div>
+</body>
+</html>
