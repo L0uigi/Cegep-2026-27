@@ -1,0 +1,136 @@
+// Classe Point
+
+package compositionagregation
+
+public class Point {
+    private static int nbInstances = 0;
+    public static final Point ORIGINE = new Point(0, 0);
+
+    private double x;
+    private double y;
+
+    public Point(double x, double y) {
+        this.x = x;
+        this.y = y;
+        nbInstances++;
+    }
+
+    public Point(Point autre) {      // constructeur de copie
+        this.x = autre.x;
+        this.y = autre.y;
+        nbInstances++;
+    }
+
+    public void translater(double dx, double dy) {
+        x += dx;
+        y += dy;
+    }
+
+    public double distance(Point autre) {
+        double dx = x - autre.x;
+        double dy = y - autre.y;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public static int getNbInstances() {
+        return nbInstances;
+    }
+
+    @Override
+    public String toString() { return "(" + x + ", " + y + ")"; }
+}
+
+// Classe SegmentAgregation
+
+package compositionagregation
+
+public class SegmentAgregation {
+    private final Point debut;
+    private final Point fin;
+
+    public SegmentAgregation(Point debut, Point fin) {
+        this.debut = debut;   // on garde la référence reçue
+        this.fin = fin;
+    }
+
+    public Point getDebut() {
+        return debut;
+    }   // on expose la référence
+
+    public Point getFin() {
+        return fin;
+    }
+
+    public double longueur() {
+        return debut.distance(fin);
+    }
+}
+
+// Classe SegmentComposition
+
+package compositionagregation
+
+public class SegmentComposition {
+    private final Point debut;
+    private final Point fin;
+
+    public SegmentComposition(Point debut, Point fin) {
+        this.debut = new Point(debut);
+        this.fin = new Point(fin);
+    }
+
+    public SegmentComposition(double x1, double y1, double x2, double y2) {
+        this.debut = new Point(x1, y1); // le segment crée lui-même ses points
+        this.fin = new Point(x2, y2);
+    }
+
+    public Point getDebut() {
+        return new Point(debut); // Jamais l'original, protège le segment
+    }
+    public Point getFin() {
+        return new Point(fin);
+    }
+
+    public double longueur() {
+        return debut.distance(fin);
+    }
+
+    public void translater(double dx, double dy) {
+        debut.translater(dx, dy);
+        fin.translater(dx, dy);
+    }
+}
+
+//  Dans une méthode main d'une classe Main
+
+public class Main {
+    public static void main(String[] args) {
+        Point a = new Point(0, 0);
+        Point b = new Point(3, 4);
+        SegmentAgregation s1 = new SegmentAgregation(a, b);
+        SegmentComposition s2 = new SegmentComposition(a, b);
+
+        System.out.println(s1.longueur() + " " + s2.longueur());
+
+        b.translater(3, 4);
+        System.out.println(s1.longueur() + " " + s2.longueur());
+
+        s2.getDebut().translater(100, 100);
+        System.out.println(s2.longueur());
+
+        s1.getDebut().translater(6, 8);
+        System.out.println(s1.longueur());
+        System.out.println(a);
+
+        System.out.println(Point.getNbInstances());
+    }
+}
+              
