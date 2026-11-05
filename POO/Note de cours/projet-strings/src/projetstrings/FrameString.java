@@ -44,7 +44,7 @@ public class FrameString {
             // codez ici question 1 ( caractère à l'indice 8 )
             reponse1.setText(String.valueOf(texte.charAt(8)));
 
-            // codez ici qu8estion 2 ( indice du premier e )
+            // codez ici question 2 ( indice du premier e )
              reponse2.setText(String.valueOf(texte.indexOf("e")));
             // codez ici question 3 ( indice du dernier e )
 			

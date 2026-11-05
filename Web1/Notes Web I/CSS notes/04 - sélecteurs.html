@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Unités - couleurs et sélecteurs</title>
+    <style>
+
+
+        /* pratiquer avec select plates CSS */
+
+
+        
+        .inline-container {
+            div{
+            display: inline;    
+            padding: 10px;
+        }
+            /* inline va désactiver margin padding etc... */
+            margin: 20px 
+        }
+        .block-container { 
+            span{
+                display: block;
+                margin: 20px;
+                padding: 10px;
+            }
+         }
+
+        #modal {
+
+        }
+
+        .none-container{
+            display: none;
+        }
+        /* pseudo classes */
+        div:hover{ /*lorsque mon curseur est sur un div */
+            text-decoration: underline;
+        }
+
+        /* first child, last child, nth-child(2), nth-child(%2) */
+        /* va au premier child de body et mets la couleur rouge */
+        body > :first-child{
+            color: red;
+        }
+
+        div div:first-child{
+            color:green;
+        }
+
+        ul{
+            height:260px;
+            /* overflow: hidden; */
+            /* overflow:scroll; */
+            /* overflow:scroll-y */
+            overflow: auto;
+        }
+        /* mettre la souris et/ou cliquer sur les liens a */
+        a:hover{ opacity: 0.5;}
+        a:active{ color:aqua}
+        a:focus {background-color: pink;}
+    </style>
+</head>
+<body>
+    <div class="inline-container">
+        <div>Inline 1</div>
+        <div>Inline 2</div>
+        <div>Inline 3</div>
+        <!-- un span donc n'a pas les même propriétés lorsqu'elles changent, ex display:inline etc... -->
+        <span>Inline 4</span>
+    </div>
+
+    <div class="block-container">
+        <div>Block 1</div>
+        <span>Block 2</span>
+    </div>
+
+    <div class="none-container">
+        <p>ABC</p>
+        <p>DEF</p>
+    </div>
+
+    <ul>
+        <li style="padding:5px;">sadasd</li>
+        <li style="padding:5px;">sadasd</li>
+        <li style="padding:5px;">asdasd</li>
+        <li style="padding:5px;">dasdasd</li>
+        <li style="padding:5px;">adaadadadad</li>
+        <li style="padding:5px;">dasqqeqe</li>
+        <li style="padding:5px;">faqeq</li>
+        <li style="padding:5px;">fdafa</li>
+        <li style="padding:5px;">fasfaf</li>
+    </ul>
+
+
+    <div id="modal">
+        <p>Hello</p>
+        <span>Dobar dan</span>
+        <a href="javascript:void(0)">Hyperlien 1</a>
+    </div>
+</body>
+</html>

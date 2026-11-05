@@ -1,0 +1,101 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+@font-face{ 
+    font-family: Amaranth;
+    src: url('../fonts/Amaranth-Regular.ttf');
+}
+
+html {
+    background-image:url('../images/background.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:bottom center;
+    height:100%;
+    font-family: Amaranth;
+}
+
+section {
+    border:1px solid black;
+    padding:10px;
+    margin-bottom:20px;
+    box-shadow: 2px 2px 5px black;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+section p:nth-child(3) {
+    font-weight: bold;
+    color:#666;
+}
+
+.container {
+    width:990px;
+    margin:50px auto;
+}
+
+header {
+    background-image:url('../images/top-image.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size:50%;
+    color:white;
+    height:180px;
+    text-align: right;
+}
+
+main {
+    background-color:white;
+    padding:10px;
+}
+
+a {
+    font-size: 1.4em;
+    color:blue;
+}
+
+#important {
+    color:green;
+}
+
+#kid-groot-section {
+    padding-right:150px;
+    background-image:url('../images/groot-kid.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size:contain;
+}
+
+#teen-groot-section {
+    padding-left:150px;
+    background-image:url('../images/groot-teen.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size:contain;
+}
+
+#adult-groot-section {
+    padding-right:150px;
+    background-image:url('../images/groot-adult.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size:contain;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding:10px;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+ul li {
+    text-align: center;
+}

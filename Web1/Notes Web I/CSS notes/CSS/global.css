@@ -1,0 +1,43 @@
+   html { 
+      font-size: 16px;
+      /* background-color: brown; */
+    }
+        .cls1 { 
+         color: cadetblue;
+         }
+        .cls2 { 
+         /* entre 0-255, 0-255, 0-255 */
+            /* color: rgb(132,118,209); */
+            color: rgba(255,255,50,0.5)
+         }
+        .cls3 { 
+         /* en HEXA */
+            color: #FF00FF;
+            /* comme si AABBCC */
+            color:#ABC;
+         }
+        .cls4 { 
+         /* voir cercle HSL */
+            color:hsl(330,100%,0%);
+         }
+
+        div.container {
+         /* pouce ou cm pour impression papier */
+            font-size: 10px;
+            p{
+               /* rem : taille à la racine */
+               /* em : taille dans la class  */
+               &.cls5 { font-size: 20px }
+               &.cls6 { font-size: 1.1rem }
+               &.cls7 { font-size: 1.1em }
+            }
+         }
+         .cls8 { 
+            background-color: blue;
+            /* vw = viewweight = weight du viewport */
+            /* idem pour height */
+            width: 50vw;
+            height: 20vh;
+            min-height: 50px;
+          }
+         
