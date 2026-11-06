@@ -11,7 +11,7 @@ public class Employe {
     // Constante(s) ici
 
     // Méthode constructeur à coder
-    public Employe(String nom, String numero, double salireHoraire, double nbreHeuresSemaine, int anciennete){
+    public Employe(String nom, String numero, double salaireHoraire, double nbreHeuresSemaine, int anciennete){
         if (nom == null || nom.isBlank()){
             throw new IllegalArgumentException("Nom invalide");
         }
@@ -33,7 +33,7 @@ public class Employe {
         }
         this.nom = nom;
         this.numero = numero;
-        this.salaireHoraire = salireHoraire;
+        this.salaireHoraire = salaireHoraire;
         this.nbreHeuresSemaine = nbreHeuresSemaine;
         this.anciennete = anciennete;
     }
@@ -82,7 +82,10 @@ public class Employe {
         return nbreHeuresSemaine * salaireHoraire;
     }
 
-
+    public double salaireNetAvantImpot(){
+        double salaireB = salaireBrut();
+        return salaireB -
+    }
 
 
     // Vous devez obligatoirement respecter le nommage imposé.

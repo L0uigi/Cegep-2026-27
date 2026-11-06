@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.YearMonth;
 
+import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BisonTest {
@@ -41,4 +42,6 @@ class BisonTest {
     void poidsNonValide(){
         assertThrows(IllegalArgumentException.class, () -> b.pesee(-2, YearMonth.of(2027, 12)));
     }
+
+
 }
