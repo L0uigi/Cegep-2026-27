@@ -84,8 +84,49 @@ public class Employe {
 
     public double salaireNetAvantImpot(){
         double salaireB = salaireBrut();
-        return salaireB -
+        salaireB -= 0.111 * salaireBrut();
+        salaireB -= 20;
+        salaireB -= 0.0136 * salaireBrut();
+
+        if (salaireB <= 0){
+            return 0.00;
+        }
+        return salaireB;
     }
+
+    public double impotFederal(){
+        return salaireNetAvantImpot() * 0.19;
+    }
+
+    public double impotProvincial(){
+        return salaireNetAvantImpot() * 0.20;
+    }
+
+    public double salaireNetApresImpot(){
+        return salaireNetAvantImpot() - impotFederal() - impotProvincial();
+    }
+
+    public int joursVacances(){
+        if (numero.charAt(0) == '1'){
+            return 5 + anciennete;
+        }
+        else if (numero.charAt(0) == '2'){
+            return 10 + anciennete;
+        }
+        else if (numero.charAt(0) == '3'){
+            return 15 + anciennete;
+        }
+        else if (numero.charAt(0) == '4'){
+            return 20 + anciennete;
+        }
+        return 0;
+    }
+
+    public void heuresSup(int heuresSuppl)
+    {
+        nbreHeuresSemaine += heuresSuppl;
+    }
+
 
 
     // Vous devez obligatoirement respecter le nommage imposé.

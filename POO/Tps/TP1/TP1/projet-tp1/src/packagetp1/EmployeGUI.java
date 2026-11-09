@@ -49,14 +49,14 @@ public class EmployeGUI {
             // méthodes heuresSup, salaireNetApresImpot et joursVacances.
 
 
-//            Employe unEmploye = new Employe ( champNom.getText(),
-//                                            champNumero.getText(),
-//                                            Double.parseDouble(champSalaireHoraire.getText()),
-//                                            Double.parseDouble(champNbHeures.getText()),
-//                                            Integer.parseInt(champAnciennete.getText()));
-//            unEmploye.heuresSup((int)spinnerHeuresSup.getValue());
-//            champSalaireApresImpot.setText(df.format(unEmploye.salaireNetApresImpot()) + "$");
-//            champJoursVacances.setText(unEmploye.joursVacances() + " jours");
+            Employe unEmploye = new Employe ( champNom.getText(),
+                                            champNumero.getText(),
+                                            Double.parseDouble(champSalaireHoraire.getText()),
+                                            Double.parseDouble(champNbHeures.getText()),
+                                            Integer.parseInt(champAnciennete.getText()));
+            unEmploye.heuresSup((int)spinnerHeuresSup.getValue());
+            champSalaireApresImpot.setText(df.format(unEmploye.salaireNetApresImpot()) + "$");
+            champJoursVacances.setText(unEmploye.joursVacances() + " jours");
 
         }
     }
