@@ -19,16 +19,16 @@ h1{
 #menu{
     h2{
         padding-top: 10px;
-        font-size:1.1rem;
+        font-size:1.3rem;
     }
     box-shadow:  0 0 5px white;
     background-color: rgba(0,0,0,0.5);
     position: relative;
     top: 35vh;
-    height: 170px;
-    width: 150px;
+    width: 200px;
     text-align: top center;
     z-index: 5;
+    height: 20vh;
     a{
         color:rgb(102, 102, 166);
         text-decoration: none;
@@ -46,14 +46,30 @@ h1{
     text-align: center;
     box-shadow:  0 0 5px white;
     overflow: hidden;
+    
+    & > div {
+        width: 100%;
+        height: 100%;
+    }
 }
 
-#steps-text{
+#steps{
     width: 900px;
-    margin: auto;
+    padding: 30px 0;
+    box-shadow:  0 0 5px white;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed ;
+    bottom: 0;
+    width: 100%;   
+    height: 400px;
+
+    & > div {
+        margin: 0 auto;
+        width: 900px;
+    } */
 }
 
-#splash-sreen{
+#splash-screen{
     background-image: url(../img/background-splash.jpg);
     background-size: cover;
     text-align: center;
@@ -70,14 +86,14 @@ h1{
 
 
 
-#player {
+    #player {
             width:150px;
             height:150px;
             background-image: url('../img/ships/01/Spaceship_01_BLUE.png');
             background-size: cover;
             position: absolute;
         }
-  #projectile {
+    #projectile {
             width:100px;
             height:100px;
             background-image: url('../img/ships/02/Spaceship_02_PURPLE.png');
