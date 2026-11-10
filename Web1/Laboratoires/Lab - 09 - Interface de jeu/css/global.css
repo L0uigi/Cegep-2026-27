@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-family: "Playwrite NZ Basic", cursive;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+#menu{
+    h2{
+        padding-top: 10px;
+        font-size:1.1rem;
+    }
+    box-shadow:  0 0 5px white;
+    background-color: rgba(0,0,0,0.5);
+    position: relative;
+    top: 35vh;
+    height: 170px;
+    width: 150px;
+    text-align: top center;
+    z-index: 5;
+    a{
+        color:rgb(102, 102, 166);
+        text-decoration: none;
+        font-weight: bold;
+        &:hover{text-decoration: underline;}
+    }
+ 
+}
+
+#game-container{
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    box-shadow:  0 0 5px white;
+    overflow: hidden;
+}
+
+#steps-text{
+    width: 900px;
+    margin: auto;
+}
+
+#splash-sreen{
+    background-image: url(../img/background-splash.jpg);
+    background-size: cover;
+    text-align: center;
+    font-size: 35px;
+    line-height: 550px;
+}
+
+#game-over-screen{
+    background-image: url(../img/background-game-over.jpg);
+}
+
+#game-screen{
+    background-image: url(../img/background-game.jpg);
+
+
+
+#player {
+            width:150px;
+            height:150px;
+            background-image: url('../img/ships/01/Spaceship_01_BLUE.png');
+            background-size: cover;
+            position: absolute;
+        }
+  #projectile {
+            width:100px;
+            height:100px;
+            background-image: url('../img/ships/02/Spaceship_02_PURPLE.png');
+            background-size: cover;
+            position: absolute;
+        }
+
+    }

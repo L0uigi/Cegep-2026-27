@@ -1,10 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Animations</title>
     <style>
+        p{
+            /* le mettre ici pour que la latence soit aussi pour le retour */
+            /* transition: opacity 500ms, font-size 1s; */
 
+
+            /* transition: all 250ms;
+
+            /* & : faire référence à soi même. comme si p:hover{opacity 0.1} */
+            /* &:hover {
+                 opacity: 0.1;
+                  font-size: 30px; */
+            /* de base le mettre ici */
+            /* transition: opacity 500ms, font-size 1s; 
+                
+        }*/
+        }
+
+        h2{
+            animation-name: dessertvong;
+            animation-duration: 4s;
+            /* le faire jouer combien de fois :  */
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+
+            /* va dans n'importe quelle direction dans keyframes */
+            /* animation-direction: alternate; */
+        }
+
+        @keyframes dessertvong {
+            /* à 0% de l'animations : */
+            0% {
+                color:red;
+            }
+            40%{
+                color:blue
+            }
+            50%{
+                opacity: 0.1;
+            }
+            70%{
+                opcacity: 1;
+            }
+            100%{
+                color:green;
+            }
+        }
+
+        /* position : static par default*/
+        /* relative : permet de le deplacer par rapport à sa position */
+        /* absolute : positionnement par rapport au début de la fenêtre/window, est ignoré des autres éléments. il prend pas 100% de la largeur, seulement ce dont il a besoin*/
+        /* fixed : reste dans la fenêtre même si on scroll */
+        /*sticky: toujours visible mais fatiguant*/
+        #modal{
+            background-color: rgba(0,0,0,0.5);
+            position:  relative;
+            color: blue;
+            /* descendre de 50 px par rapport a sa position */
+            top: 50px; /* top left bottom right*/
+            left: 30px;
+            z-index: 1; /*profondeur : + c'est haut, + c'est vers nous*/
+        }
+
+        main{
+            margin-top: 100px;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative; /*si un élément absolu a un parent relatif, son origine est ce parent*/
+            /*pour que la boite noir suive le main et non le haut de la page */
+        }
     </style>
 </head>
 <body>
@@ -18,5 +87,15 @@
             <p>lorem ipsum dolor sit amet.</p>
         </div>
     </div>
+    <main>
+    <div id="modal">
+        <h1>Attention</h1>
+        <p>Voulez-vous vraiment supprimer cette ficher</p>
+    </div>
+
+    <p>lsdadsadkasdnadsadkasdndsadkasdndsadkasdndsadkasdndsadkasdndsadkasdn</p>
+    <p>lsdadsadkasdnadsadkasdndsadkasdndsadkasdndsadkasdndsadkasdn</p>
+    <p>lsdadsadkasdnadsadkasdndsadkasdndsadkasdndsadkasdn</p>
+    </main>
 </body>
 </html>

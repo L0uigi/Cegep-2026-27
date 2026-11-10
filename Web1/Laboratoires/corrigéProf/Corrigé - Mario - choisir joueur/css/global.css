@@ -1,0 +1,69 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+html {
+	background-image: url('../images/landscape.jpg');
+	background-repeat: repeat-x;
+	background-position: center bottom;
+	height:100%;
+	font-family: "Courier New", Courier, monospace;
+	background-color: #92ddfd;
+}
+
+h1 {
+	animation: title-colors 6s infinite;
+	text-transform: uppercase;
+	height: 40px;
+	transition: rotate 1s;
+
+	&:hover {
+		rotate: 360deg;
+	}
+}
+
+@keyframes title-colors {
+	0% { color: red; font-size:27px }
+	25% { color: blue; }
+	50% { color: green; font-size:30px }
+	75% { color: orange; }
+	100% { color: red; font-size:27px }
+}
+
+table {
+	width: 100%;
+}
+
+table tr td {
+	height:150px;
+	vertical-align: middle;
+}
+
+h1 {
+	text-align: center;
+}
+
+.container {
+	margin:50px auto;
+	border:1px solid black;
+	width:980px;
+	padding:10px;
+	color:#555;
+	background-color: white;
+}
+
+.box {
+	margin:0px auto;
+	border:1px solid black;
+	width:100px;
+	height:100px;
+
+	transition: box-shadow 1s, opacity 1s ease-out;
+}
+
+.box:hover {
+	box-shadow: 0 0 15px black;
+	cursor: pointer;
+	opacity:0.5;
+}

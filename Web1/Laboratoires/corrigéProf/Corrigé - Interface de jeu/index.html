@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Speed</title>
+        <link rel="stylesheet" href="css/global.css">
+        <script src="js/screens/GameScreen.js"></script>
+        <script src="js/screens/SplashScreen.js"></script>
+        <script src="js/screens/GameOverScreen.js"></script>
+        <script src="js/game.js" defer></script>
+    </head>
+    <body>
+        <h1>Le jeu de vitesse : Essayez de survivre le plus longtemps possible</h1>
+        <div id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">Jeu</a></li>
+                <li><a href="#">Scores</a></li>
+                <li><a href="#">À propos</a></li>
+            </ul>
+        </div>
+        <div id="game-container">
+            <div id="splash-screen">
+                Appuyez sur la touche entrée pour démarrer le jeu.
+            </div>
+            <div id="game-screen">
+                <span id="score"></span>
+            </div>
+            <div id="game-over-screen">
+                <p>Game over</p>
+                <span id="final-score"></span>
+            </div>
+        </div>
+        <div id="steps">
+            <div>
+				<h2>Étapes du laboratoire</h2>
+				<p>Note : Le jeu est fonctionnel et vous devez éviter les projectiles en vous déplaçant avec les flèches. Le jeu s'occupera automatiquement d'afficher et de cacher les différents écrans (ex: splash-screen), veuillez simplement, à l'aide d'images et de CSS, décorer le jeu.</p>
+                <ol>
+                    <li>Le menu à gauche doit être centré verticalement et ne doit pas bouger, même s'il y a un défilement de la fenêtre. Il doit être 20% de la hauteur de la fenêtre.</li>
+                    <li>Le #game-container doit être de 900px par 600px, et centré dans la page.</li>
+					<li>La section (#steps), doit être en position fixe, en bas de la page.</li>
+					<li>Le #steps-text doit être de 900px de largeur et centré dans la page.</li>                    
+                    <li>L'image de fond de la page Web est : background.jpg. Chaque écran (screen) du jeu possède sa propre image de fond.</li>
+                    <li>Le jeu aura 2 types d'objet : des div.projectile et un div.player. Utilisez du CSS pour les différencier visuellement (ex: background-image). Il est très important de définir une largeur et hauteur à ces éléments.</li>
+                    <li>Ces 2 types d'objet doivent être positionnés de façon absolue par rapport à l'écran de jeu (game-screen).</li>
+                    <li>Vous pouvez trouvez des images de vaisseau et des images de fond dans le dossier "img".</li>
+                    <li>Les pointages seront placés automatiquement dans les spans, veuillez simplement les styliser avec du CSS.</li>
+                    <li>Terminer de styliser le jeu afin de le rendre plus attrayant visuellement (incluant une police de Google Fonts).</li>
+                </ol>
+            </div>
+        </div>
+    </body>
+</html>
