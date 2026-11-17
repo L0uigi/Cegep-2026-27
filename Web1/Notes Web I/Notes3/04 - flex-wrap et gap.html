@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex - wrap et gap</title>
+    <style>
+        section {
+            min-height:200px;
+            padding:10px;
+            border: 1px solid blue;
+            display:flex;
+        }
+
+        div {
+            border: 1px solid black;
+            padding:5px;
+            flex-shrink:0;
+            flex-basis:20%;
+
+            &.child-5 {
+                flex-basis:75%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="child-1">Enfant 1</div>
+        <div class="child-2">Enfant 2</div>
+        <div class="child-3">Enfant 3</div>
+        <div class="child-4">Enfant 4</div>
+        <div class="child-5">Enfant 5</div>
+        <div class="child-6">Enfant 6</div>
+        <div class="child-7">Enfant 7</div>
+        <div class="child-8">Enfant 8</div>
+        <div class="child-9">Enfant 9</div>
+        <div class="child-10">Enfant 10</div>
+    </section>
+</body>
+</html>

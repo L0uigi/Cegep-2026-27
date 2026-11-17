@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex - introduction</title>
+    <style>
+        div {
+            height:100px;
+            padding:20px;
+            border:5px solid black;
+            margin:20px;
+            &:first-child{
+                /*Il faut ajouter padding et margin pour avoir la vrai hauteur*/
+                box-sizing: content-box; /*valeur par defaut*/
+            }
+            &:last-child{
+                box-sizing: border-box;
+            }
+            /*????????????????*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Boîte 1
+    </div>
+    <div>
+        Boîte 2
+    </div>
+</body>
+</html>

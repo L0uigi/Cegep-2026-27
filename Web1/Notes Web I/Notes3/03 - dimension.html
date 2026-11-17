@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex - dimension</title>
+    <style>
+        section {
+            margin-bottom:50px;
+            min-height:200px;
+            padding:10px;
+            border: 1px solid blue;
+            display:flex;
+            gap:5px;
+            align-items: center;
+            /*SI on réduit trop la fenêtre, le restant du tableau va sur une nouvelle ligne*/
+            flex-wrap: wrap;
+            /*sépare les colonnes*/
+            column-gap: 10vw;
+        }
+
+        div {
+            border: 1px solid black;
+            padding: 40px;
+            width: 100px; /*flex-basis, comme width, mais pour l'axe principal*/
+        }
+
+        .child-1 {
+            /*va prendre l'espace restant du tableau flex*/
+            flex-grow: 1;
+        }
+
+        .child-2 {
+            /*prend 2 fois plus d'espace*/ 
+            flex-grow: 2;
+        }
+        .child-3 {
+            /*on l'interdis de rétrécir lorsqu'on change la taille de la fenêtre*/
+            flex-shrink: 0;
+        }
+
+        .child-4 {
+            /*commande générale: flex: "grow" "shrink" "taille";*/
+            flex: 1 0 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="child-1">Enfant 1</div>
+        <div class="child-2">Enfant 2</div>
+        <div class="child-3">Enfant 3</div>
+        <div class="child-4">Enfant 4</div>
+    </section>
+</body>
+</html>
