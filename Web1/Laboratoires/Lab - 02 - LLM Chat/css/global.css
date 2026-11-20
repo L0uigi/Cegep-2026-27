@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ceci permet de ne pas ajouter de marge ou de bordure au calcul de la taille d'un élément, c'est donc plus simple à calculer */
+}
+
+html{
+    background-color: rgb(77, 75, 75);
+    font-style: Verdana, monospace;
+    font-size: 18px;
+}
+.splash-container {
+    display: flex;
+}
+
+.splash-content{
+    background-color: rgba(128, 128, 128, 0.774);
+    border: 3px solid white;
+    border-radius: 5px / 5px;
+    justify-content: center;
+    align-items: center;
+}
+/*
+Général
+- La police de caractères utilisée est Verdana, avec une taille de 18px et un interligne de 1.5
+
+Page accueil :
+ - La hauteur de la page est de 100% du viewport
+ - La boîte est centrée verticalement et horizontalement grâce à flexbox
+
+Page chat :
+ - Le header occupe 10% de la hauteur du viewport, le reste est pour le contenu
+ - Le contenu est divisé en deux : une barre latérale de 250px et une zone de chat qui prend le reste de l'espace
+ - La taille maximale de la zone de chat est de 1200px et elle est centrée horizontalement avec margin auto
+*/

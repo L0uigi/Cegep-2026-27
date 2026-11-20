@@ -1,0 +1,103 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-family: 'Trebuchet MS';
+    font-size: 16px;
+    text-align: justify;
+    background-color:#333;
+}
+
+header {
+    width:100%;
+    padding:20px 0;
+    background-color:#333;
+    display:flex;
+
+    color:white;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+h1 {
+    font-size:2em;
+    margin:10px 0;
+}
+
+footer {
+    background-color:#333;
+    padding-top:10px;
+    color:white;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+p {
+    margin-bottom:10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    background-color: #33a2ff;
+    background-image: url('../images/logo.png');
+    display: flex;
+}
+
+.container {
+    width:990px;
+    margin: 0 auto;
+    padding:10px;
+    display: flex;
+}
+
+.main-news {
+    /* padding-top:90px; */
+    background-color:white;
+    
+}
+
+#side-news{
+    background-color: white;
+    flex-shrink:0;
+    width: 250px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    div {
+        display:flex;
+        img{
+            width: 40%;
+            margin: 10px;
+            flex-grow: 0;
+        }
+        p {
+            flex-grow: 1;
+        }
+    }
+}
+
+#live img {
+    width: 100%;
+}
+
+#photoGroupe{
+      flex-grow: 1; 
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 5px;
+}
+#photoGroupe img{
+    width: 100%!important;
+    display: block; 
+  
+}

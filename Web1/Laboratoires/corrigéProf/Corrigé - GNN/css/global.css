@@ -1,0 +1,135 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-family: 'Trebuchet MS';
+    font-size: 16px;
+    text-align: justify;
+    background-color:#333;
+}
+
+header {
+    position:fixed;
+    width:100%;
+    padding:20px;
+    background-color:#333;
+}
+
+header ul {
+    display : flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+header ul li {
+    padding:0px 10px;
+}
+
+header ul li a {
+    color:white;
+}
+
+p {
+    margin-bottom:10px;
+}
+
+main {
+    background-color: #33a2ff;
+    background-image: url('../images/logo.png');
+}
+
+.container {
+    width:990px;
+    margin: 0 auto;
+    padding:10px;
+}
+
+.main-news {
+    padding-top:90px;
+    display: flex;
+    background-color:white;
+}
+
+#live {
+    flex-grow: 1;
+    padding-right:10px;
+}
+
+#live img {
+    width: 100%;
+}
+
+.trending {
+    flex-basis:250px;
+	flex-shrink:0;
+    display: flex;
+    flex-direction: column;
+}
+
+.trending article img {
+    width:80px;
+}
+
+.trending-image {
+    margin-right: 10px;
+}
+
+.trending article {
+    display: flex;
+    margin-bottom:30px;
+    padding-bottom:15px;
+    border-bottom: 2px solid #ddd;
+}
+
+.trending .team {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.trending .team img {
+    width:100%;   
+    display: block; 
+    
+}
+
+h1 {
+    font-size:2em;
+    margin:10px 0;
+}
+
+footer {
+    background-color:#333;
+    padding-top:10px;
+    color:white;
+}
+
+footer .title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+footer > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    padding-top:5px;
+}
+
+footer a {
+    color:white;
+}

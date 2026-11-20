@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat</title>
+        <script defer src="js/chat.js"></script>
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+    <body>
+        <div class="chat-container">
+            <header>
+                <h1>Chat CVM</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="chat.html">Chat</a></li>
+                        <li><a href="javascript:void(0)">Paramètres</a></li>
+                        <li><a href="index.html">Déconnexion</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div>
+                <aside>
+                    <a href="chat.html">Nouveau chat</a>
+                    <a href="javascript:void(0)">Historique</a>
+                    <a href="index.html">Déconnexion</a>
+                </aside>
+                <main>
+                    <div id="chat-box"></div>
+                    <div id="form-box">
+                        <form id="chat-form" action="">
+                            <input type="text" placeholder="Écrivez votre message...">
+                            <button type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
