@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid - introduction</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+
+        section {
+            border:1px solid blue;
+            display: grid;
+            /* combien chaque colonne prend d'espace*/
+            grid-template-columns: 100px 10vw 100px;
+            /* pour beaucoup de colonnes*/
+            grid-template-columns: repeat(5,100px);
+            /*comme flex, justify-content center, end ,start, strech*/
+
+            /*changer la hauteur des rangées*/
+            /* grid-template-rows: 100px 200px; */
+
+            /*change la hauteur relativement aux autres rows*/
+            grid-template-rows: 1fr 1fr 4fr;
+            justify-content: center;
+            /*espace entre chaque ligne*/
+            row-gap: 5px;
+            /*espace entre chaque colone*/
+            column-gap: 10px;
+            /*écrire gap 10px pour tous les côtés*/
+
+        
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="child-1";>Enfant 1</div>
+        <div class="child-2">Enfant 2</div>
+        <div class="child-3">Enfant 3</div>
+        <div class="child-4">Enfant 4</div>
+        <div class="child-5">Enfant 5</div>
+        <div class="child-6">Enfant 6</div>
+        <div class="child-7">Enfant 7</div>
+        <div class="child-8">Enfant 8</div>
+        <div class="child-9">Enfant 9</div>
+    </section>
+</body>
+</html>

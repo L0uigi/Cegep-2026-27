@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid - cellules</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+
+        section {
+            border:1px solid blue;
+            display:grid;
+            grid-template-columns: 100px 100px 100px;
+			width:100%;
+			height:50vh;
+            gap: 10px;
+        }
+
+        .child-2{
+            grid-column-start: 2;
+            grid-column-end: 4; /* exclue donc 3*/
+            /* Équivalent de grid-column: 2 / 4;*/
+
+            grid-row-start: 2;
+            grid-row-end: 4;
+
+            /* row start, colummn start, row end, column end*/
+            grid-area: 2 / 2 / 4 / 4;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="child-1">Enfant 1</div>
+        <div class="child-2">Enfant 2</div>
+        <div class="child-3">Enfant 3</div>
+        <div class="child-4">Enfant 4</div>
+        <div class="child-5">Enfant 5</div>
+        <div class="child-6">Enfant 6</div>
+        <div class="child-7">Enfant 7</div>
+        <div class="child-8">Enfant 8</div>
+        <div class="child-9">Enfant 9</div>
+        <!-- grid garden pour pratiquer en -->
+    </section>
+</body>
+</html>

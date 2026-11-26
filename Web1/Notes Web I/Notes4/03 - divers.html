@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Divers</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .hero {
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px;
+            font-size: 1.25em;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #ccc;
+        }
+
+        ul {
+            margin-top: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Divers - Hero box</h1>
+    <div class="hero" id="hero-box">
+        <h2>Hero box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </div>
+    <div>
+        <ul>
+            <li><a target="_blank" href="">rafraichir une page</a></li>
+            <li><a href="#" onclick="alert(123)">Item 1</a></li>
+            <!-- bonne façon d'annuler un lien  -->
+            <li><a href="javascript:void(0)" onclick="alert(123)">Item 2</a></li>
+            <li><a href="https://perdu.com">Item 3 (chemin absolue)</a></li>
+            <li><a href="#hero-box">Aller au hero-box (ancrage)</a></li>
+            <li><a href="#">Aller au hero box</a></li>
+            
+        </ul>
+    </div>
+</body>
+</html>

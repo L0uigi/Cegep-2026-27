@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding-top: 25px;
+    height: 15vh;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    background-color: #59b4fe;
+    color:white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+
+    div {
+        font-size: 1.2rem;
+
+        span {
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: orange;
+        }
+    }
+}
+
+footer {
+    height: 15vh;
+    border-top: 2px solid #ccc;
+    background-color: #59b4fe;
+    color:white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    div {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        ul {
+            padding-left:20px;
+            line-height: 1.4em;
+        }
+    }
+}
+
+.game-container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b3b2b2;
+
+    & > div {
+        position:relative;
+        width: 600px;
+        height: 600px;
+        box-sizing: content-box;
+        background-color: #59b4fe7e;
+        border: 2px solid #ccc;
+        overflow: hidden;
+
+        section {
+            .wall {
+                position: absolute;
+                background-color: #5a0f0f;
+            }
+
+            .spike {
+                position: absolute;
+                background-image: url('../img/spike.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+
+            .jump {
+                position: absolute;
+                background-image: url('../img/jump.webp');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+
+            .mouse {
+                position: absolute;
+            }
+
+            .cheese {
+                position: absolute;
+                background-image: url('../img/cheese.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+
+            button {
+                position: absolute;
+                width: 200px;
+                height:40px;
+                left: calc(50% - 100px);
+                top: calc(50% - 20px);
+                text-align: center;
+                font-size: 1.2rem;
+                cursor: pointer;
+                opacity: 0.8;
+                z-index: 2;
+                animation: scale 2.5s ease-in-out alternate-reverse infinite;
+            }
+
+            .win {
+                position: absolute;
+                color: green;
+                width: 300px;
+                height:40px;
+                left: calc(50% - 150px);
+                top: calc(50% - 20px);
+                font-size: 1.5rem;
+                z-index: 2;
+                animation: scale 2.5s ease-in-out alternate-reverse infinite;
+            }
+
+            .loose {
+                position: absolute;
+                color: red;
+                width: 300px;
+                height:40px;
+                left: calc(50% - 150px);
+                top: calc(50% - 20px);
+                text-align: center;
+                font-size: 1.5rem;
+                z-index: 2;
+                animation: scale 2.5s ease-in-out alternate-reverse infinite;
+            }
+        }
+    }
+}
+
+main {
+    div {
+        border: 1px solid #ccc;
+        position: relative;
+        z-index: 1;
+        pointer-events: none;
+
+        &.wall {
+            background-color:rgba(99, 2, 2, 0.2);
+        }
+        &.jump {
+                background-image: url('../img/jump.webp');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+        }
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
